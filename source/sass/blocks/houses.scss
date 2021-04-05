@@ -6,7 +6,6 @@
     margin-bottom: 55px;
     color: $color-green;
     text-align: center;
-    // margin: 0 auto;
 
     @include viewport--sm {
       @include text(32px, 38px, 700);
@@ -56,18 +55,21 @@
     border-radius: 25px;
     background-color: transparent;
     color: $color-black;
-    margin: 60px auto;
+    margin: 50px auto;
 
     &::after {
       @include pseudo();
       right: 15px;
       top: calc(50% - 10px);
-      // transform: translateY(-10px);
       bottom: 0;
       width: 13px;
       height: 20px;
       background-image: url("../img/svg/arrow.svg");
       background-repeat: no-repeat;
+    }
+
+    @include viewport--md {
+      margin-top: 0;
     }
   }
 }

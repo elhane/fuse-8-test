@@ -475,6 +475,15 @@ button,
   position: fixed;
   overflow-y: auto; }
 
+.error {
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: 500;
+  color: #ec6608; }
+
+.empty {
+  text-align: center; }
+
 .container {
   width: 100%;
   max-width: 1265px;
@@ -489,9 +498,6 @@ button,
   @media (max-width: 767px) {
     .container--no-padding {
       padding: 0; } }
-
-.header {
-  display: block; }
 
 .houses {
   padding-top: 30px; }
@@ -551,7 +557,7 @@ button,
     border-radius: 25px;
     background-color: transparent;
     color: #363636;
-    margin: 60px auto; }
+    margin: 50px auto; }
     .houses__btn::after {
       content: "";
       display: block;
@@ -563,19 +569,20 @@ button,
       height: 20px;
       background-image: url("../img/svg/arrow.svg");
       background-repeat: no-repeat; }
+    @media (max-width: 1023px) {
+      .houses__btn {
+        margin-top: 0; } }
 
 .house {
-  background-color: #f8f8f8;
-  border: 1px solid #d8d8d8;
-  margin: 0 11px 38px;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
   -ms-flex-preferred-size: 379px;
       flex-basis: 379px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  max-width: 33%; }
+  max-width: 33%;
+  margin: 0 11px 38px;
+  background-color: #f8f8f8;
+  border: 1px solid #d8d8d8; }
   @media (max-width: 1439px) {
     .house {
       max-width: 50%; } }
@@ -640,9 +647,3 @@ button,
       background-color: #006f79; }
   .house__price {
     font-weight: 700; }
-
-.error {
-  font-size: 34px;
-  line-height: 40px;
-  font-weight: 500;
-  color: #ec6608; }

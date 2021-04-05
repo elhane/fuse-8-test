@@ -44,3 +44,12 @@
 
   overflow-y: auto;
 }
+
+.error {
+  @include text(34px, 40px, 500);
+  color: $color-orange;
+}
+
+.empty {
+  text-align: center;
+}

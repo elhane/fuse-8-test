@@ -17,7 +17,8 @@ const renderCard = (house) => {
   address.textContent = house.address;
   price.textContent = `£${divideNumberByPieces(house.price, ',')}`;
   image.src = `../img/content/house-${randonNum}.jpg`;
-  link.href = `details/${house.id}`;
+  image.alt = `house ${house.title} image`;
+  link.href = `/details/${house.id}`;
 
   switch (house.type) {
     case 'IndependentLiving':

@@ -1,12 +1,12 @@
 import {renderCard} from '../modules/render-card.js';
+import {insertMessage} from '../utils/insert-message';
 
 const container = document.querySelector('.houses__list');
+const emptyMessageBlock = document.querySelector('.empty');
 
 const errorHandler = () => {
-  const h2 = document.createElement('h2');
-  h2.classList.add('error');
-  h2.textContent = 'Loading error :( Please, refresh the page';
-  container.appendChild(h2);
+  emptyMessageBlock.innerHTML = '';
+  insertMessage(emptyMessageBlock, 'Loading error :( Please, refresh the page');
 };
 
 const insertCards = (houses) => {
@@ -20,4 +20,4 @@ const insertCards = (houses) => {
   container.appendChild(fragment);
 };
 
-export {insertCards, errorHandler, container};
+export {insertCards, errorHandler, emptyMessageBlock};

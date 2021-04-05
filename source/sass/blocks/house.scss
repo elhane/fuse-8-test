@@ -1,11 +1,10 @@
 .house {
-  background-color: $color-gray-1;
-  border: 1px solid $color-gray-2;
-  margin: 0 11px 38px;
-  transition: $default-transition-settings;
   flex-basis: 379px;
   flex-grow: 1;
   max-width: 33%;
+  margin: 0 11px 38px;
+  background-color: $color-gray-1;
+  border: 1px solid $color-gray-2;
 
   @include viewport--lg {
     max-width: 50%;
@@ -50,8 +49,6 @@
   &__image {
     position: relative;
     width: 100%;
-    // max-height: 300px;
-    // height: 60%;
     height: 227px;
     overflow-y: hidden;
 
@@ -95,13 +92,4 @@
   &__price {
     font-weight: 700;
   }
-}
-
-// .house--hidden {
-//   display: none;
-// }
-
-.error {
-  @include text(34px, 40px, 500);
-  color: $color-orange;
 }

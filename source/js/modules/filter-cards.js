@@ -1,4 +1,5 @@
-import {container} from '../modules/insert-cards';
+import {emptyMessageBlock} from '../modules/insert-cards';
+import {insertMessage} from '../utils/insert-message';
 
 const filter = document.querySelector('#filter');
 const hiddenClass = 'house--hidden';
@@ -8,13 +9,9 @@ const isClosed = (card) => {
 };
 
 const showEmptyMessage = (arr) => {
-  container.querySelector('.empty').innerHTML = '';
-  const h2 = document.createElement('h2');
+  emptyMessageBlock.innerHTML = '';
   if (arr.every(isClosed)) {
-    h2.textContent = '';
-    h2.classList.add('error');
-    h2.textContent = 'No elements found :(';
-    container.querySelector('.empty').appendChild(h2);
+    insertMessage(emptyMessageBlock, 'No elements found :(');
   }
 };
 
