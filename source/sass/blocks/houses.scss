@@ -1,0 +1,73 @@
+.houses {
+  padding-top: 30px;
+
+  &__title {
+    @include text(36px, 40px, 700);
+    margin-bottom: 55px;
+    color: $color-green;
+    text-align: center;
+    // margin: 0 auto;
+
+    @include viewport--sm {
+      @include text(32px, 38px, 700);
+    }
+  }
+
+  &__list {
+    @include list-reset();
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  &__filter {
+    margin: 0 12px 50px;
+  }
+
+  &__filter-label {
+    @include text(16px, 24px, 700);
+    margin-right: 20px;
+  }
+
+  &__filter-input {
+    height: 50px;
+    width: 418px;
+    padding: 0 20px;
+    border: 1px solid $color-gray-2;
+    border-radius: 25px;
+    outline: 0;
+
+    @include viewport--md {
+      width: 300px;
+    }
+
+    @include viewport--sm {
+      width: 210px;
+    }
+  }
+
+  &__btn {
+    @include text(16px, 24px, 700);
+    position: relative;
+    display: block;
+    min-width: 150px;
+    padding: 13px 35px;
+    border: 1px solid $color-gray-2;
+    border-radius: 25px;
+    background-color: transparent;
+    color: $color-black;
+    margin: 60px auto;
+
+    &::after {
+      @include pseudo();
+      right: 15px;
+      top: calc(50% - 10px);
+      // transform: translateY(-10px);
+      bottom: 0;
+      width: 13px;
+      height: 20px;
+      background-image: url("../img/svg/arrow.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}

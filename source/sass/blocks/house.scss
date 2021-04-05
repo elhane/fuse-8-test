@@ -1,0 +1,107 @@
+.house {
+  background-color: $color-gray-1;
+  border: 1px solid $color-gray-2;
+  margin: 0 11px 38px;
+  transition: $default-transition-settings;
+  flex-basis: 379px;
+  flex-grow: 1;
+  max-width: 33%;
+
+  @include viewport--lg {
+    max-width: 50%;
+  }
+
+  @include viewport--md {
+    max-width: 100%;
+  }
+
+  @include viewport--sm {
+    max-width: 100%;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &__description {
+    @include text(16px, 20px);
+    padding: 20px 17px 10px 20px;
+  }
+
+  &__name {
+    @include text(20px, 24px, 700);
+    margin: 0;
+  }
+
+  &__address {
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+
+  &__offer {
+    margin-bottom: 10px;
+  }
+
+  &__ownership {
+    @include text(14px, 18px);
+    margin: 10px 0;
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    // max-height: 300px;
+    // height: 60%;
+    height: 227px;
+    overflow-y: hidden;
+
+    @include viewport--lg {
+      height: 300px;
+    }
+
+    @include viewport--md {
+      height: 350px;
+    }
+
+    @include viewport--sm {
+      height: 280px;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 10px;
+    color: $color-default-white;
+
+    &--support {
+      background-color: $color-orange;
+    }
+
+    &--independent {
+      background-color: $color-teal;
+    }
+  }
+
+  &__price {
+    font-weight: 700;
+  }
+}
+
+// .house--hidden {
+//   display: none;
+// }
+
+.error {
+  @include text(34px, 40px, 500);
+  color: $color-orange;
+}
