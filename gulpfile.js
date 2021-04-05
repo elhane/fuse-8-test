@@ -14,6 +14,8 @@ const del = require('del');
 const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
 const fileinclude = require('gulp-file-include');
+const ghPages = require('gh-pages');
+const path = require('path');
 
 const html = () => {
   return gulp.src(['source/html/*.html'])
@@ -144,6 +146,12 @@ const optimizeImages = () => {
       ]))
       .pipe(gulp.dest('build/img'));
 };
+
+// gh-pages
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
 
 exports.build = build;
 exports.start = start;
